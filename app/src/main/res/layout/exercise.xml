@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.aninterface.Exercise"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--top-->
+    <include
+        android:id="@+id/exercise_topbar"
+        layout="@layout/topbar">
+    </include>
+
+    <!--body-->
+    <LinearLayout
+        android:id="@+id/s"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_topbar">
+
+        <ListView
+            android:id="@+id/subject_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent">
+
+        </ListView>
+    </LinearLayout>
+
+    <!--bottom-->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ButtonExercise"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:contentDescription="@string/td"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonPerson"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/exer" />
+
+        <ImageButton
+            android:id="@+id/ButtonPerson"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_edit"
+            android:clickable="true"
+            android:contentDescription="@string/td"
+            android:focusable="true"
+            android:onClick="onClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/p_c" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

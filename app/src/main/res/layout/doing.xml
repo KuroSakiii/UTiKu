@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.aninterface.Doing"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--top-->
+    <RelativeLayout
+        android:id="@+id/activity_doing_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_top"
+        app:layout_constraintBottom_toTopOf="@+id/exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/activity_doing_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_left_back"
+            android:clickable="true"
+            android:contentDescription="@string/td"
+            android:focusable="true"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/activity_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/xiangqing"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!--body-->
+    <ScrollView
+        android:id="@+id/exercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ln_bo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_doing_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.daquexian.flexiblerichtextview.FlexibleRichTextView
+                    android:id="@+id/Question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/que_pic"
+                app:layout_constraintBottom_toTopOf="@+id/btn_showanswer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_question"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_showanswer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape"
+                android:onClick="onClick"
+                android:text="@string/showans"
+                android:textColor="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/content_answer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/content_question" />
+
+            <LinearLayout
+                android:id="@+id/content_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_showanswer"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.daquexian.flexiblerichtextview.FlexibleRichTextView
+                    android:id="@+id/Answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom-->
+    <LinearLayout
+        android:id="@+id/ln_bo"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/shoucang"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/wait"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/shoucang"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/xiayiti"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/next1"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/next"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_Name">U题库</string>
+    <string name="slogan">It\'s never too late to study!</string>
+    <string name="Username">用户名</string>
+    <string name="Password">密码</string>
+    <string name="ConfirmPassword">确认密码</string>
+    <string name="Register">注册</string>
+    <string name="Login">登录</string>
+    <string name="TurnToSignUp">用户注册</string>
+    <string name="Tip">注册即代表同意《用户协议》</string>
+    <string name="td">TODO</string>
+    <string name="Search">输入课程名</string>
+    <string name="Search_btn">搜索</string>
+    <string name="find">搜索</string>
+    <string name="exercise">练习</string>
+    <string name="center">用户</string>
+    <string name="error">我的收藏</string>
+    <string name="changepsw">修改密码</string>
+    <string name="off">退出登录</string>
+    <string name="welcome">Welcome!</string>
+    <string name="xiangqing">题目详情</string>
+    <string name="shoucang">收藏</string>
+    <string name="next">下一题</string>
+    <string name="demo">这里将显示题目</string>
+    <string name="demo1">这里将显示答案</string>
+    <string name="oldpsw">原密码</string>
+    <string name="newpsw">新密码</string>
+    <string name="confirmnewpsw">确认新密码</string>
+    <string name="confirm">确认修改</string>
+    <string name="showans">显示答案</string>
+    <string name="logining">登录中</string>
+    <string name="loading">数据加载中</string>
+    <string name="submit">数据提交中</string>
+    <string name="collection">收藏详情</string>
+    <string name="subjectname">这里是课程名称</string>
+    <string name="chaptername">这里是章节名称</string>
+    <string name="label">类别</string>
+    <string name="digest">摘要</string>
+    <string name="courselist">课程列表</string>
+
+</resources>

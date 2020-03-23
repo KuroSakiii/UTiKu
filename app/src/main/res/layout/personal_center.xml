@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.aninterface.Person"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graybg">
+
+    <!--top-->
+    <include
+        android:id="@+id/person_topbar"
+        layout="@layout/topbar">
+    </include>
+
+    <!--body-->
+    <LinearLayout
+        android:id="@+id/option_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_topbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <LinearLayout style="@style/innerstyle">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/td"
+                android:src="@drawable/collection" />
+
+            <TextView
+                android:id="@+id/errorquestion"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:textSize="20sp"
+                android:text="@string/error" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/imagestyle"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/td" />
+
+        <LinearLayout style="@style/innerstyle">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/td"
+                android:src="@drawable/changep" />
+
+            <TextView
+                android:id="@+id/changepsw"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:textSize="20sp"
+                android:text="@string/changepsw" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/imagestyle"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/td" />
+
+        <LinearLayout style="@style/innerstyle">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.15"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/td"
+                android:src="@drawable/aleft" />
+
+            <TextView
+                android:id="@+id/off"
+                android:layout_width="0dp"
+                android:layout_weight="0.85"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:textSize="20sp"
+                android:text="@string/off" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/imagestyle"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/td" />
+
+    </LinearLayout>
+
+    <!--bottom-->
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option_list">
+
+        <ImageButton
+            android:id="@+id/ButtonExercise"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/color_edit"
+            android:contentDescription="@string/td"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonPerson"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/exer" />
+
+        <ImageButton
+            android:id="@+id/ButtonPerson"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:contentDescription="@string/td"
+            android:focusable="true"
+            android:onClick="onClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/p_c" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

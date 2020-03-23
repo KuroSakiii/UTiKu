@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    </style>
+    <!--
+        android:layout_width:设置宽度占满父元素
+        android:layout_height:设置高度60dp
+        android:background:引入Android内置白色
+        android:orientation:设置内容水平摆放
+    -->
+    <style name="innerstyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@color/inb</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--
+        对图片控件的样式设置
+        android:layout_width:设置宽度
+        android:layout_height:设置高度
+        android:background:引入color中的声明为grey的颜色
+        android:layout_gravity:设置当前元素在父元素的位置为水平居中
+    -->
+    <style name="imagestyle">
+        <item name="android:layout_width">400dp</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!--
+        myteststyle样式中声明了要用到的样式
+        android:layout_width:match_parent元素占满父元素
+        android:layout_marginTop顶部外边距15dp
+        android:background:背景色为白色
+    -->
+    <style name="myteststyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="task_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+</resources>

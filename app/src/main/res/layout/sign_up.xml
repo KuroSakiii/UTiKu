@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.administrator.aninterface.SignUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_signup">
+
+    <!--top-->
+    <RelativeLayout
+        android:id="@+id/activity_register_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_top"
+        app:layout_constraintBottom_toTopOf="@+id/body_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/activity_register_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_left_back"
+            android:clickable="true"
+            android:contentDescription="@string/td"
+            android:focusable="true"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/activity_register_back"
+            android:text="@string/Register"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!--body-->
+    <LinearLayout
+        android:id="@+id/body_signup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_register_top">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/register_account"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="5dp"
+        android:drawableStart="@android:drawable/ic_menu_myplaces"
+        android:hint="@string/Username"
+        android:importantForAutofill="no"
+        android:inputType=""
+        app:layout_constraintBottom_toTopOf="@+id/register_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_register_top"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/register_pwd"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@android:drawable/ic_lock_idle_lock"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/register_pwd_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_account"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/register_pwd_confirm"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:drawableStart="@android:drawable/ic_lock_idle_lock"
+        android:ems="10"
+        android:hint="@string/ConfirmPassword"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/register_confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_pwd"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/register_confirm"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/shape"
+        android:onClick="onClick"
+        android:text="@string/Register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_pwd_confirm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"
+        android:text="@string/Tip"
+        android:textColor="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_confirm"
+        app:layout_constraintVertical_bias="0.5" />
+
+</android.support.constraint.ConstraintLayout>
